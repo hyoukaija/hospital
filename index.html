@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/logo-BDIcyrbY.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-BDIcyrbY.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- 基础SEO -->
@@ -12,6 +12,7 @@
     <meta name="author" content="金泰国际健康株式会社" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://kintai-healthy.com/" />
     
     <!-- 语言和地区 -->
     <meta name="language" content="zh-CN" />
@@ -106,13 +107,28 @@
       "currenciesAccepted": "JPY"
     }
     </script>
-    <script type="module" crossorigin src="./assets/index-yDB3NSRp.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vendor-CUhL3xEJ.js">
-    <link rel="modulepreload" crossorigin href="./assets/ui-CLI0bRbB.js">
-    <link rel="modulepreload" crossorigin href="./assets/animation-BC_G7-WH.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-B8Th5eVd.css">
+    <script type="module" crossorigin src="/assets/index-KaL6FuoG.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-CORHtaqV.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-CLI0bRbB.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-BC_G7-WH.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DznACr3w.css">
   </head>
   <body>
     <div id="app"></div>
+    
+    <!-- SPA路由支持 -->
+    <script type="text/javascript">
+        // 处理GitHub Pages的SPA路由
+        (function(l) {
+            if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
   </body>
 </html>

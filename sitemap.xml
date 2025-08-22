@@ -4,7 +4,25 @@
 
   <url>
     <loc>https://kintai-healthy.com/</loc>
-    <lastmod>2025-08-22T06:30:24.060Z</lastmod>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kintai-healthy.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kintai-healthy.com/" />
+  </url>
+  <url>
+    <loc>https://kintai-healthy.com/en/</loc>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kintai-healthy.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kintai-healthy.com/en/" />
+  </url>
+  <url>
+    <loc>https://kintai-healthy.com/ja/</loc>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/" />
@@ -13,7 +31,25 @@
   </url>
   <url>
     <loc>https://kintai-healthy.com/social</loc>
-    <lastmod>2025-08-22T06:30:24.060Z</lastmod>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/social" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kintai-healthy.com/social" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kintai-healthy.com/social" />
+  </url>
+  <url>
+    <loc>https://kintai-healthy.com/en/social</loc>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/social" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kintai-healthy.com/ja/social" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kintai-healthy.com/en/social" />
+  </url>
+  <url>
+    <loc>https://kintai-healthy.com/ja/social</loc>
+    <lastmod>2025-08-22T10:45:51.850Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kintai-healthy.com/social" />

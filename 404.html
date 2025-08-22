@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>金泰国际健康株式会社</title>
+    <script type="text/javascript">
+        // 单页应用路由重定向
+        var pathSegmentsToKeep = 0;
+
+        var l = window.location;
+        
+        // 检查是否是语言路径
+        var pathParts = l.pathname.split('/').filter(function(part) { return part.length > 0; });
+        var supportedLocales = ['zh', 'en', 'ja'];
+        
+        // 如果第一个路径段是支持的语言，保持它
+        if (pathParts.length > 0 && supportedLocales.indexOf(pathParts[0]) !== -1) {
+            pathSegmentsToKeep = 1;
+        }
+        
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
+    </script>
+</head>
+<body>
+    <p>正在重定向...</p>
+</body>
+</html>
