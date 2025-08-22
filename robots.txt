@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# 允许所有搜索引擎爬虫访问
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# 禁止访问管理页面和API
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# 禁止访问临时文件和日志
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /*.log$
+
+# 允许访问静态资源
+Allow: /src/assets/
+Allow: /public/
+
+# 网站地图
+Sitemap: https://kintai-healthy.com/sitemap.xml
+
+# 爬取延迟（秒）
+Crawl-delay: 1
