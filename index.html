@@ -107,26 +107,35 @@
       "currenciesAccepted": "JPY"
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-KaL6FuoG.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-CORHtaqV.js">
+    <script type="module" crossorigin src="/assets/index-DxSDtKtB.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-BT6pYI3x.js">
     <link rel="modulepreload" crossorigin href="/assets/ui-CLI0bRbB.js">
     <link rel="modulepreload" crossorigin href="/assets/animation-BC_G7-WH.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-DznACr3w.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-MUh8sPi6.css">
   </head>
   <body>
     <div id="app"></div>
     
     <!-- SPA路由支持 -->
     <script type="text/javascript">
-        // 处理GitHub Pages的SPA路由
+        // 简化的SPA路由处理
         (function(l) {
             if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
                     return s.replace(/~and~/g, '&')
                 }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
+                
+                // 检查解码后的路径是否包含语言前缀
+                var pathParts = decoded.split('/').filter(function(part) { return part.length > 0; });
+                var supportedLocales = ['zh', 'en', 'ja'];
+                
+                // 如果路径包含语言前缀，直接使用该路径
+                if (pathParts.length > 0 && supportedLocales.indexOf(pathParts[0]) !== -1) {
+                    window.history.replaceState(null, null, '/' + decoded + l.hash);
+                } else {
+                    // 普通路径处理
+                    window.history.replaceState(null, null, '/' + decoded + l.hash);
+                }
             }
         }(window.location))
     </script>

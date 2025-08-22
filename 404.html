@@ -2,32 +2,73 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>金泰国际健康株式会社</title>
-    <script type="text/javascript">
-        // 单页应用路由重定向
-        var pathSegmentsToKeep = 0;
-
-        var l = window.location;
-        
-        // 检查是否是语言路径
-        var pathParts = l.pathname.split('/').filter(function(part) { return part.length > 0; });
-        var supportedLocales = ['zh', 'en', 'ja'];
-        
-        // 如果第一个路径段是支持的语言，保持它
-        if (pathParts.length > 0 && supportedLocales.indexOf(pathParts[0]) !== -1) {
-            pathSegmentsToKeep = 1;
+    <title>金泰国际健康株式会社 - 页面未找到</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
-    </script>
+        .loading-container {
+            text-align: center;
+            color: #333;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #dc1818;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loading-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .redirect-text {
+            font-size: 14px;
+            color: #666;
+        }
+        .auto-redirect {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #dc1818;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <p>正在重定向...</p>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">页面未找到</div>
+        <div class="redirect-text">正在自动跳转到首页...</div>
+        <button class="auto-redirect" onclick="redirectToHome()">立即跳转</button>
+    </div>
+    
+    <script type="text/javascript">
+        // 自动跳转到首页
+        function redirectToHome() {
+            var l = window.location;
+            l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/');
+        }
+        
+        // 3秒后自动跳转
+        setTimeout(redirectToHome, 3000);
+    </script>
 </body>
 </html>
